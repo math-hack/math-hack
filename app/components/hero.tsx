@@ -1,7 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Brain, Target, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Target,
+  Sparkles,
+  Smartphone,
+  CreditCard,
+  GraduationCap,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Hero() {
@@ -31,22 +38,22 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium hover-lift hover:bg-primary/20 transition-all duration-300">
               <Target className="w-4 h-4 animate-pulse-glow" />
-              <span>Preparación Universitaria de Excelencia</span>
+              <span>Academia Pre-Universitaria de Excelencia</span>
               <Sparkles className="w-4 h-4 animate-pulse-glow" />
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-              Tu camino hacia la{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-shimmer">
+              Hackea tu camino a la{" "}
+              <span className="text-primary bg-linear-to-r from-primary to-accent bg-clip-text text-transparent animate-shimmer">
                 universidad
-              </span>{" "}
-              comienza aquí
+              </span>
             </h1>
 
+            {/* Updated Content */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty max-w-2xl">
-              Preparamos estudiantes para alcanzar su máximo potencial en los
-              exámenes de admisión más desafiantes. Formación integral en
-              matemáticas, razonamiento verbal, ciencias y apoyo psicológico.
+              Preparamos cachimbos con metodología innovadora: DATA CARDS
+              digitales, APPS con IA para reforzar Matemática, Física y Química.
+              Ingresa a las mejores universidades del Perú.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -58,36 +65,40 @@ export function Hero() {
                   Comienza tu preparación
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="text-base bg-transparent hover-lift hover:bg-primary/5 transition-all duration-300"
+                onClick={() => {
+                  console.log("click");
+                  window.location.href = "https://wa.link/6zgji0";
+                }}
               >
-                Conoce nuestros programas
+                Ver ciclos disponibles
               </Button>
             </div>
 
-            {/* Features con animación escalonada */}
+            {/* Updated Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
               {[
                 {
-                  icon: BookOpen,
-                  title: "Contenido Completo",
-                  desc: "Todas las áreas evaluadas",
+                  icon: CreditCard,
+                  title: "DATA CARDS",
+                  desc: "Tarjetas virtuales precisas",
                   delay: "delay-100",
                 },
                 {
-                  icon: Brain,
-                  title: "Apoyo Psicológico",
-                  desc: "Manejo del estrés",
+                  icon: Smartphone,
+                  title: "APPS con IA",
+                  desc: "Aprende y refuerza temas",
                   delay: "delay-200",
                 },
                 {
-                  icon: Target,
-                  title: "Resultados Comprobados",
-                  desc: "95% de aprobación",
+                  icon: GraduationCap,
+                  title: "Cachimbos 2025-2026",
+                  desc: "Por modalidades",
                   delay: "delay-300",
                 },
               ].map((feature, idx) => (
@@ -100,7 +111,7 @@ export function Hero() {
                   }`}
                   style={{ animationDelay: `${idx * 150}ms` }}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 hover-lift hover:bg-primary/20 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 hover-lift hover:bg-primary/20 transition-all duration-300">
                     <feature.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -116,12 +127,13 @@ export function Hero() {
             </div>
           </div>
 
+          {/* Existing code */}
           <div
             className={`relative lg:h-[600px] h-[400px] ${
               mounted ? "animate-slide-in-right" : "opacity-0"
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary/70 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500">
+            <div className="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary/70 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500">
               <img
                 src="/estudiantes-motivados-estudiando-juntos-exito-acad.jpg"
                 alt="Estudiantes preparándose para la universidad"

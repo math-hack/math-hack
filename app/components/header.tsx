@@ -15,7 +15,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-xl">
-                MH
+                M
               </span>
             </div>
             <span className="font-bold text-lg md:text-xl text-foreground">
@@ -53,7 +53,12 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={() => {
+                window.location.href = "https://wa.link/6zgji0";
+              }}
+            >
               Inscríbete Ahora
             </Button>
           </div>
@@ -96,7 +101,12 @@ export function Header() {
               >
                 Contacto
               </a>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2">
+              <Button
+                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2"
+                onClick={() => {
+                  window.location.href = "https://wa.link/6zgji0";
+                }}
+              >
                 Inscríbete Ahora
               </Button>
             </div>

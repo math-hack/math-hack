@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -7,7 +9,7 @@ export function CTA() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden">
           {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary" />
 
           {/* Content */}
           <div className="relative px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
@@ -33,6 +35,9 @@ export function CTA() {
                   size="lg"
                   variant="outline"
                   className="text-base font-semibold bg-white/10 text-white border-white/30 hover:bg-white/20"
+                  onClick={() => {
+                    window.location.href = "https://wa.link/6zgji0";
+                  }}
                 >
                   Solicita información
                 </Button>
@@ -41,17 +46,17 @@ export function CTA() {
               {/* Benefits */}
               <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center gap-2 text-white">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span className="text-sm font-medium">
                     Primera clase gratis
                   </span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span className="text-sm font-medium">Material incluido</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span className="text-sm font-medium">Sin matrícula</span>
                 </div>
               </div>

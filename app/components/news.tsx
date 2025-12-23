@@ -3,38 +3,37 @@ import { Calendar, ArrowRight, TrendingUp } from "lucide-react";
 
 const newsItems = [
   {
-    date: "15 Dic 2024",
-    category: "Resultados",
-    title:
-      "¡Record histórico! 98% de nuestros estudiantes ingresaron a su primera opción",
+    date: "20 Ene 2025",
+    category: "Nuevo",
+    title: "Lanzamiento de APPS con IA para Matemática, Física y Química",
     description:
-      "Este ciclo 2024 logramos nuestro mejor resultado con 345 estudiantes ingresando a las universidades más prestigiosas del país.",
-    image: "/estudiantes-celebrando-exito-graduacion.jpg",
+      "Revoluciona tu forma de estudiar con nuestras nuevas aplicaciones potenciadas con inteligencia artificial. Aprende de manera interactiva y personalizada.",
+    image: "/estudiante-usando-tablet-con-app-educativa-moderna.jpg",
     featured: true,
   },
   {
-    date: "10 Dic 2024",
-    category: "Nuevo Programa",
-    title: "Lanzamos programa intensivo de verano 2025",
+    date: "15 Ene 2025",
+    category: "Inscripciones",
+    title: "Inscripciones abiertas para Ciclos de Verano 2026",
     description:
-      "Preparación acelerada de 8 semanas para el examen de admisión. Inscripciones abiertas hasta el 20 de diciembre.",
-    image: "/salon-clases-moderno-estudiantes.jpg",
+      "Ya están abiertas las inscripciones para el Ciclo Vacacional, Virtual Paralelo CPU y Ordinario 2026 II. ¡Asegura tu cupo!",
+    image: "/estudiantes-en-aula-moderna-inscribiendose.jpg",
   },
   {
-    date: "5 Dic 2024",
-    category: "Eventos",
-    title: 'Charla gratuita: "Cómo vencer el estrés del examen de admisión"',
+    date: "10 Ene 2025",
+    category: "Tecnología",
+    title: "DATA CARDS: Tu nueva forma de estudiar",
     description:
-      "Únete a nuestra charla con psicólogos expertos este sábado 18 de diciembre a las 10:00 AM.",
-    image: "/conferencia-educativa-auditorio.jpg",
+      "Tarjetas virtuales con información precisa para ciencias y letras. Accede desde cualquier dispositivo, en cualquier momento.",
+    image: "/tarjetas-digitales-educativas-en-smartphone.jpg",
   },
   {
-    date: "1 Dic 2024",
-    category: "Testimonios",
-    title: "Historia de éxito: De 250 puntos a 850 en el examen",
+    date: "5 Ene 2025",
+    category: "Talleres",
+    title: "Taller: Mi primera APP con IA - Modalidad Virtual y Presencial",
     description:
-      "Conoce la inspiradora historia de María, quien logró un puntaje excepcional después de 6 meses de preparación.",
-    image: "/estudiante-feliz-con-certificado.jpg",
+      "Aprende a crear tu primera aplicación con inteligencia artificial. Modalidades virtual y presencial disponibles.",
+    image: "/estudiantes-programando-computadora-workshop.jpg",
   },
 ];
 
@@ -82,7 +81,7 @@ export function News() {
                 </div>
               </div>
 
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <div className="p-6 md:p-8 flex flex-col grow">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                   <Calendar className="w-4 h-4" />
                   {newsItems[0].date}
@@ -113,7 +112,7 @@ export function News() {
               key={index}
               className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-xl flex flex-col sm:flex-row lg:flex-col"
             >
-              <div className="relative h-48 sm:w-1/3 lg:w-full sm:h-full lg:h-48 overflow-hidden flex-shrink-0">
+              <div className="relative h-48 sm:w-1/3 lg:w-full sm:h-full lg:h-48 overflow-hidden shrink-0">
                 <img
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
@@ -126,7 +125,7 @@ export function News() {
                 </div>
               </div>
 
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                   <Calendar className="w-4 h-4" />
                   {item.date}
@@ -136,7 +135,7 @@ export function News() {
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow text-pretty line-clamp-2">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 grow text-pretty line-clamp-2">
                   {item.description}
                 </p>
 

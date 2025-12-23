@@ -15,29 +15,31 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">
-                  MH
-                </span>
-              </div>
+              <img
+                src="/math-hack.jpg"
+                alt="Math Hack"
+                className="size-20 object-contain "
+              />
               <span className="font-bold text-xl text-foreground">
                 Math Hack
               </span>
             </div>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              Preparando estudiantes para alcanzar sus sueños universitarios
-              desde hace más de 15 años.
+              Academia pre-universitaria con metodología innovadora. Preparamos
+              cachimbos con DATA CARDS y APPS con IA.
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/people/MATH-HACK/61570487675805/"
                 className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center"
                 aria-label="Facebook"
+                target="_blank"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/math.hack8"
+                target="_blank"
                 className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center"
                 aria-label="Instagram"
               >
@@ -73,14 +75,14 @@ export function Footer() {
                   Nuestros Programas
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#noticias"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Noticias
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#contacto"
@@ -101,7 +103,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Matemáticas
+                  Cachimbos por Modalidades
                 </a>
               </li>
               <li>
@@ -109,7 +111,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Razonamiento Verbal
+                  DATA CARDS
                 </a>
               </li>
               <li>
@@ -117,7 +119,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ciencias
+                  APPS con IA
                 </a>
               </li>
               <li>
@@ -125,7 +127,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Apoyo Psicológico
+                  Ciclos de Verano
                 </a>
               </li>
             </ul>
@@ -136,21 +138,21 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
                   Av. Principal 123, Lima, Perú
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  +51 999 888 777
+                  +51 929 341 433
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  info@mathhack.edu.pe
+                  math.hack73@gmail.com
                 </span>
               </li>
             </ul>
@@ -163,19 +165,31 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               © 2025 Math Hack. Todos los derechos reservados.
             </p>
-            <div className="flex gap-6">
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Política de Privacidad
-              </a>
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Términos de Servicio
-              </a>
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+              <p className="text-sm text-muted-foreground">
+                Desarrollado por{" "}
+                <a
+                  className="text-primary font-semibold"
+                  href="https://hans-dev.vercel.app"
+                  target="_blank"
+                >
+                  Hans Melchor
+                </a>
+              </p>
+              {/* <div className="flex gap-6">
+                <a
+                  href="#"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Política de Privacidad
+                </a>
+                <a
+                  href="#"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Términos de Servicio
+                </a>
+              </div> */}
             </div>
           </div>
         </div>
