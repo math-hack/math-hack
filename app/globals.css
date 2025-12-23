@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Tema personalizado con rojos pastel y oscuros para academia */
+  /* Tema personalizado con rojos pastel, oscuros y dorado para academia premium */
   --background: oklch(0.985 0.01 20);
   --foreground: oklch(0.18 0.02 20);
   --card: oklch(1 0 0);
@@ -19,6 +19,9 @@
   --muted-foreground: oklch(0.48 0.01 20);
   --accent: oklch(0.82 0.14 18);
   --accent-foreground: oklch(0.18 0.02 20);
+  /* Agregando color dorado/oro para estética premium */
+  --gold: oklch(0.75 0.15 75);
+  --gold-foreground: oklch(0.18 0.02 20);
   --destructive: oklch(0.55 0.25 25);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.9 0.02 20);
@@ -41,7 +44,7 @@
 }
 
 .dark {
-  /* Modo oscuro con rojos intensos */
+  /* Modo oscuro con rojos intensos y dorado */
   --background: oklch(0.12 0.02 20);
   --foreground: oklch(0.98 0 0);
   --card: oklch(0.15 0.02 20);
@@ -56,6 +59,9 @@
   --muted-foreground: oklch(0.65 0.01 20);
   --accent: oklch(0.35 0.18 18);
   --accent-foreground: oklch(0.98 0 0);
+  /* Agregando color dorado para modo oscuro */
+  --gold: oklch(0.85 0.18 75);
+  --gold-foreground: oklch(0.12 0.02 20);
   --destructive: oklch(0.55 0.25 25);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.25 0.04 20);
@@ -92,6 +98,9 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  /* Agregando token de color dorado al tema */
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -206,6 +215,41 @@
   }
 }
 
+/* Agregando animaciones 3D avanzadas para DataCards */
+@keyframes rotate-3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(5deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+}
+
+@keyframes card-flip {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+@keyframes bounce-3d {
+  0%,
+  100% {
+    transform: perspective(1000px) translateZ(0px) scale(1);
+  }
+  50% {
+    transform: perspective(1000px) translateZ(50px) scale(1.05);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -236,6 +280,18 @@
   background-size: 1000px 100%;
 }
 
+.animate-rotate-3d {
+  animation: rotate-3d 8s ease-in-out infinite;
+}
+
+.animate-card-flip {
+  animation: card-flip 6s ease-in-out infinite;
+}
+
+.animate-bounce-3d {
+  animation: bounce-3d 3s ease-in-out infinite;
+}
+
 /* Transiciones suaves globales */
 * {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -248,4 +304,14 @@
 
 .hover-lift:hover {
   transform: translateY(-4px);
+}
+
+/* Mejoras para efectos 3D en hover */
+.hover-lift-3d {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.hover-lift-3d:hover {
+  transform: perspective(1000px) translateZ(20px) rotateX(2deg) rotateY(2deg);
 }

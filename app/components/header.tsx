@@ -13,14 +13,16 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">
-                M
+            <div className="flex items-center gap-3">
+              <img
+                src="/math-hack.jpg"
+                alt="Math Hack"
+                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+              />
+              <span className="font-bold text-lg md:text-xl text-foreground">
+                ath Hack
               </span>
             </div>
-            <span className="font-bold text-lg md:text-xl text-foreground">
-              Math Hack
-            </span>
           </div>
 
           {/* Desktop Navigation */}

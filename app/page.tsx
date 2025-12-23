@@ -1,4 +1,6 @@
+import { CreatorSection } from "./components/creator-section";
 import { CTA } from "./components/cta";
+import { DataCardsSection } from "./components/data-card-section";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
@@ -11,8 +13,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Programs />
+      <DataCardsSection></DataCardsSection>
+      <CreatorSection></CreatorSection>
       {/* <News /> */}
       <CTA />
       <Footer />
