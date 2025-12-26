@@ -150,7 +150,7 @@ export function Hero() {
                       Materiales
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      Materiales de clase y materiales de estudio
+                      Material de clases + Apps
                     </p>
                   </div>
                 </div>
