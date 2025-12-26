@@ -135,22 +135,22 @@ export function Hero() {
           >
             <div className="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary/70 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500">
               <img
-                src="/estudiantes-motivados-estudiando-juntos-exito-acad.jpg"
+                src="/banner.jpg"
                 alt="Estudiantes preparándose para la universidad"
                 className="w-full h-full object-cover opacity-90 mix-blend-overlay"
               />
 
               <div className="absolute top-8 right-8 bg-card/90 backdrop-blur-md p-4 rounded-xl shadow-2xl hover-lift animate-float border border-primary/20">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center animate-pulse-glow">
+                  {/* <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center animate-pulse-glow">
                     <span className="text-2xl font-bold text-primary">95%</span>
-                  </div>
+                  </div> */}
                   <div>
                     <p className="text-sm font-semibold text-card-foreground">
-                      Tasa de Aprobación
+                      Materiales
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      Ingreso universitario
+                      Materiales de clase y materiales de estudio
                     </p>
                   </div>
                 </div>
@@ -161,17 +161,17 @@ export function Hero() {
                 style={{ animationDelay: "1s" }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center animate-pulse-glow">
+                  {/* <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center animate-pulse-glow">
                     <span className="text-2xl font-bold text-primary">
                       500+
                     </span>
-                  </div>
+                  </div> */}
                   <div>
                     <p className="text-sm font-semibold text-card-foreground">
-                      Estudiantes
+                      Docentes
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      En universidades top
+                      Docentes especializados
                     </p>
                   </div>
                 </div>
