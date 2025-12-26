@@ -20,7 +20,7 @@ export function Header() {
                 className="w-12 h-12 md:w-14 md:h-14 object-contain"
               />
               <span className="font-bold text-lg md:text-xl text-foreground">
-                ath Hack
+                Math Hack
               </span>
             </div>
           </div>
